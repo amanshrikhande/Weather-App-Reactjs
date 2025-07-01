@@ -1,0 +1,139 @@
+/* --- Modern, Centered, and Well-Aligned Weather App CSS --- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #181c2b 0%, #232946 60%, #1f2a40 100%);
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  background: rgba(34, 39, 54, 0.96);
+  border-radius: 24px;
+  box-shadow: 0 8px 40px 0 rgba(0, 234, 255, 0.12), 0 2px 8px 0 #0008;
+  padding: 48px 32px 32px 32px;
+  text-align: center;
+  color: #f1f1f1;
+  min-width: 320px;
+  max-width: 95vw;
+  width: 370px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(4px);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 28px;
+  color: #00eaff;
+  text-shadow: 0 2px 24px #2a353655, 0 1px 2px #4b6270;
+  background: linear-gradient(90deg, #00eaff 40%, #ff6bcb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.input-box {
+  padding: 14px 22px;
+  border-radius: 10px;
+  border: 1.5px solid #232946;
+  background: #181c2b;
+  color: #f1f1f1;
+  font-size: 1.1rem;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 16px rgba(0, 234, 255, 0.08);
+  margin-bottom: 24px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.input-box:focus {
+  outline: none;
+  border: 1.5px solid #00eaff;
+  box-shadow: 0 0 0 3px #00eaff33;
+}
+
+::placeholder {
+  color: #b0b8c1;
+  opacity: 1;
+  letter-spacing: 1px;
+}
+
+.weather-box {
+  margin-top: 28px;
+  background: rgba(24, 28, 43, 0.92);
+  border-radius: 18px;
+  padding: 28px 18px 18px 18px;
+  box-shadow: 0 4px 32px 0 rgba(0, 234, 255, 0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.7s;
+}
+
+.weather-icon {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 16px #00eaff88);
+}
+
+.weather-box h2 {
+  font-size: 1.5rem;
+  margin: 0 0 8px 0;
+  color: #00eaff;
+  text-shadow: 0 2px 16px #00eaff33;
+}
+
+.weather-box p {
+  margin: 6px 0;
+  font-size: 1.08rem;
+  color: #f1f1f1;
+  letter-spacing: 0.5px;
+}
+
+.error {
+  color: #ff6bcb;
+  margin-top: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.loader {
+  margin: 32px auto;
+  border: 6px solid #232946;
+  border-top: 6px solid #00eaff;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(24px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 24px 4vw 16px 4vw;
+    min-width: unset;
+    width: 98vw;
+  }
+  .input-box {
+    width: 100%;
+  }
+  .weather-box {
+    padding: 18px 2vw 12px 2vw;
+  }
+}

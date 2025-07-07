@@ -62,3 +62,19 @@ This project is a beginner-friendly weather app built using React. It fetches li
 - Handling asynchronous fetches with React lifecycle
 - CSS responsiveness across screen sizes
 - Understanding `.env` configuration with React
+
+---
+
+## 🎯 Future Improvements
+
+- [ ] 7-day weather forecast view  
+- [ ] Unit toggle between Celsius and Fahrenheit  
+- [ ] Use browser geolocation to detect current weather  
+- [ ] Add local storage for recent searches  
+- [ ] Implement light/dark theme toggle  
+- [ ] Add unit and integration tests  
+- [ ] Improve accessibility (keyboard navigation, ARIA)
+
+---
+
+> Created with 💙 by [Aman Shrikhande](https://github.com/amanshrikhande)
